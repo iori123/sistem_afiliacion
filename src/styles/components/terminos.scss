@@ -1,0 +1,25 @@
+.terminos {
+    margin-top: .8rem;
+    display: flex;
+    align-items: center;
+    &__check--active {
+        height: 25px;
+        width: 25px;
+        color: #fff;
+        background-color: green;
+    }
+    &__check {
+        height: 25px;
+        width: 25px;
+        background-color: transparent;
+    }
+    &__text {
+        margin: 0 10px;
+        font-size: .8rem;
+        color: #a9b1d1;
+        position: relative;
+        span {
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.steps {
+    position: relative;
+    font-size: 14px;
+    margin-top: 48px;
+    margin-bottom: 48px;
+    &__current {
+        color: #4990ef;
+    }
+    &__back {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #4990ef;
+        border: 1px solid #4990ef;
+        border-radius: 50%;
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        left: 0;
+        transform: translateX(-150%);
+        top: 0;
+    }
+}

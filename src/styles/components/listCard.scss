@@ -1,0 +1,51 @@
+.listCard {
+    user-select: none;
+    padding: 20px 0;
+    &__item {
+        line-height: 40px;
+        color: #494f66;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        small {
+            font-size: 16px;
+            color: #838aa4;
+        }
+    }
+    &__item--inactive {
+        font-weight: 100;
+        color: #838aa4;
+        text-decoration: line-through;
+    }
+    &__text {
+        color: inherit;
+        margin-left: 1rem;
+        margin-right: .6rem;
+    }
+    &__heart {
+        display: inline-block;
+        position: relative;
+        width: 20px;
+        height: 17px;
+        transform: scale(.7);
+    }
+    &__heart::before,
+    &__heart::after {
+        position: absolute;
+        content: "";
+        width: 10px;
+        height: 16px;
+        background-color: #2f80ed;
+        border-radius: 50px 50px 0 0;
+    }
+    &__heart::after {
+        left: 10px;
+        transform: rotate(-45deg);
+        transform-origin: 0 100%;
+    }
+    &__heart::before {
+        left: 0;
+        transform: rotate(45deg);
+        transform-origin: 100% 100%;
+    }
+}

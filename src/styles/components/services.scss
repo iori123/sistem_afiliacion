@@ -1,0 +1,46 @@
+@mixin line-border {
+    border-bottom: 1px solid $grayLight;
+}
+
+.services {
+    &__message {
+        margin-top: 45px;
+        padding-bottom: 32px;
+        font-weight: normal;
+        font-size: 1rem;
+        color: $textPrimary;
+        @include line-border();
+        display: block;
+        b {
+            display: block;
+            color: $textResalt;
+            font-weight: 500;
+        }
+    }
+    &__beneficios {}
+    &__item {
+        cursor: pointer;
+        position: relative;
+        color: #8d93ab;
+        padding: 30px 0;
+        @include line-border();
+    }
+    &__itemList {
+        user-select: none;
+        opacity: 0;
+        margin-top: .5rem;
+        color: #8d93ab;
+        display: none;
+        transition: all .5s ease-in-out;
+        li {
+            height: inherit;
+            line-height: 1.2rem;
+            transition: all .5s ease-in-out;
+        }
+    }
+    &__itemList--active {
+        opacity: 1;
+        display: block;
+        font-size: .8rem;
+    }
+}

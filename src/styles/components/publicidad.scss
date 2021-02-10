@@ -1,0 +1,64 @@
+ .publicidad {
+     color: #fff;
+     width: 85%;
+     margin: 2rem auto;
+     max-width: 400px;
+     @media only screen and (min-width: 720px) {
+         transform: skewX( 2deg);
+         -webkit-transform: skewX( 2deg);
+         -ms-transform: skewX(2deg);
+         -o-transform: skewX(2deg);
+         -moz-transform: skewX(2deg);
+     }
+     &__title {
+         font-size: 3rem;
+         margin-top: 140px;
+         font-weight: 100;
+         b {
+             font-weight: 400;
+         }
+         @media only screen and (min-width: 720px) {
+             max-width: 230px;
+         }
+     }
+     &__list {
+         margin-top: 1rem;
+         display: flex;
+         flex-wrap: nowrap;
+         overflow: auto;
+         -webkit-overflow-scrolling: touch;
+         -ms-overflow-style: -ms-autohiding-scrollbar;
+         color: $grayLight;
+         @media only screen and (min-width: 720px) {
+             flex-direction: column;
+             flex-wrap: wrap;
+             margin-top: 2.5rem;
+             margin-bottom: 5rem;
+         }
+     }
+     &__item {
+         display: flex;
+         flex-direction: column;
+         font-size: 1.2rem;
+         flex: 0 0 100%;
+         @media only screen and (min-width: 720px) {
+             flex-direction: row;
+             align-items: center;
+             font-size: 1rem;
+             font-weight: 100;
+         }
+     }
+     &__icono {
+         margin: .5rem 0;
+         width: 20px;
+         height: 20px;
+         @media only screen and (min-width: 720px) {
+             margin-right: 1rem;
+         }
+     }
+     &__footer {
+         margin-bottom: 52px;
+         font-size: .75rem;
+         color: $grayLight;
+     }
+ }

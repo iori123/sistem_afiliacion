@@ -1,0 +1,18 @@
+.radio {
+    margin-top: 2rem;
+    &__title {
+        font-weight: 200;
+        color: $textPrimary;
+        font-size: 18px;
+    }
+    &__group {
+        font-size: inherit;
+        line-height: 35px;
+    }
+    &__label {
+        font-size: 14px;
+        user-select: none;
+        color: $textPrimary;
+        margin-left: .4rem;
+    }
+}

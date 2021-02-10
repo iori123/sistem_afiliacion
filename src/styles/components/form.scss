@@ -1,0 +1,42 @@
+.Form {
+    @media only screen and (min-width: 1024px) {
+        // max-width: 350px;
+    }
+    &__group {
+        display: flex;
+        margin: auto;
+        width: 100%;
+        align-items: center;
+    }
+    &__select {
+        cursor: pointer;
+        border-top: 1px solid $borderInput;
+        border-left: 1px solid $borderInput;
+        border-bottom: 1px solid $borderInput;
+        border-right: 0;
+        border-radius: 4px 0 0 4px;
+        width: 31.5%;
+        height: 56px;
+        border-radius: 4px;
+        color: #a9b1d1;
+        font-size: 16px;
+        padding-left: 14px;
+        padding-top: 6px;
+        outline: none;
+    }
+    &__error {
+        color: $errorInput;
+        font-size: 12px;
+    }
+}
+
+.button_Form {
+    text-transform: uppercase;
+    background-color: $textResalt;
+    border: none;
+    margin-top: 2.4rem;
+    padding: 15px 26px;
+    color: #fff;
+    border-radius: .5rem;
+    cursor: pointer;
+}

@@ -1,0 +1,48 @@
+.elementForm {
+    width: 100%;
+    position: relative;
+    margin-top: 5px;
+    min-height: 60px;
+    &__input {
+        color: $colorInput;
+        border: 1px solid $borderInput;
+        width: inherit;
+        height: 56px;
+        padding-left: 16px;
+        padding-top: 16px;
+        border-radius: 4px;
+        outline: none;
+        font-size: 1rem;
+        box-shadow: none;
+        transition: box-shadow .3s, border .3s;
+        -webkit-box-shadow: 0 0 0 900px #fff inset;
+        -webkit-text-fill-color: #95979e;
+        -webkit-appearance: none;
+        -moz-appearance: textfield;
+        appearance: none;
+    }
+    &__input--error {
+        border: 1px solid $errorInput
+    }
+    &__label {
+        pointer-events: none;
+        color: $labelText;
+        position: absolute;
+        bottom: 50%;
+        transform: translate(0, 50%);
+        left: 1rem;
+        display: block;
+        margin: 0 auto;
+        font-size: 1rem;
+        cursor: point;
+        transition: transform .2s ease-out, color .2s ease-out, -webkit-transform .2s ease-out;
+        -webkit-transform-origin: 0 100%;
+        transform-origin: 0 100%;
+        text-align: left;
+    }
+    &__label--active {
+        transform: translateY(-10px);
+        font-family: inherit;
+        font-size: 12px;
+    }
+}
