@@ -12,6 +12,7 @@ export const CheckBox = (props : any) => {
             className="terminos"
         >
             <input 
+                
                 onChange = {handleChecked}
                 className= { state.checked ? 'terminos__check' :'terminos__check--active '}
                 type="checkbox" />

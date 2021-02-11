@@ -47,8 +47,7 @@
         }
     }
     &__thanks {
-        margin-top: 1.3rem;
-        text-align: justify;
+        padding-top: 5rem;
         margin: auto;
         display: flex;
         justify-content: center;
@@ -56,7 +55,12 @@
         align-items: center;
         max-width: 450px;
         .button {
-            align-self: flex-end;
+            align-self: center;
+        }
+        @media only screen and (min-width: 720px) {
+            .button {
+                align-self: center;
+            }
         }
     }
 }
