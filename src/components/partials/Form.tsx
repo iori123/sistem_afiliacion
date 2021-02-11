@@ -25,7 +25,8 @@ type Check = {
     text : string
 }
 type Form = {
-    
+    path : string,
+    isValid: boolean ,
     inputSelect :string,
     select : string,
     inputs : Array<Input>
@@ -57,18 +58,23 @@ function Form ( props : {initialState : Form}) {
             ...state ,
             select: event.target.value
          })
+
      }
     const setInputValue = ( stateInput : any) => {
-        const newInputs = state.inputs.map( input => {
+        let isValid = false;
+        const newInputs = state.inputs.map( (input ) => {
             if( input.name === stateInput.name ) {
                 input.value = stateInput.value;
                 input.error = stateInput.error;
             };
+            isValid = !input.error.isError
             return input 
         });
+      
         setState({
             ...state ,
-            inputs: newInputs
+            inputs: newInputs,
+            isValid :isValid
         })
      }
     const handleType = (event: { target: HTMLInputElement}) => {
@@ -143,11 +149,15 @@ function Form ( props : {initialState : Form}) {
                     )
                 })
             }
-            <ButtonForm
-                state = {state}
-                type = {state.button.type}
-                text = {state.button.text}
-            />
+            
+            
+                <ButtonForm
+                    path={state.path}
+                    isValid = {state.isValid}
+                    type = {state.button.type}
+                    text = {state.button.text}
+                />
+           
         </form>
     )
     

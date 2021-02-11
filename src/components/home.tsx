@@ -3,8 +3,11 @@ import Head from './partials/headMessage';
 import Form from '../components/partials/Form';
 import { Publicidad } from './partials/Publicidad';
 import shadow from '././../assets/sombra.png';
+import { stat } from 'fs';
 
 const stateForm = {
+    path: '/register',
+    isValid: false,
     inputSelect : '',
     select : '',
     inputs : [
@@ -14,7 +17,7 @@ const stateForm = {
            labelText : 'Numero de documento',
            value : '',
            error : {
-               isError : false, 
+               isError : true, 
                details: ''
            }
         },
@@ -24,7 +27,7 @@ const stateForm = {
            labelText : 'Fecha de Nacimiento',
            value : '',
            error : {
-               isError : false,
+               isError : true,
                details: '' 
            }
         },
@@ -34,7 +37,7 @@ const stateForm = {
            labelText : 'Celular',
            value: '',
            error : {
-               isError : false ,
+               isError : true ,
                details: ''
            }
         }
@@ -65,7 +68,8 @@ const Home = () =>  {
 
             <div className="home__wrapper">
                 <div className="home__content">
-                   <Publicidad/>
+                   <Publicidad
+                   />
                     <div className="home__img">
                         <img src={shadow} alt="shadow"/>
                     </div>

@@ -64,6 +64,8 @@ const initialPlanes = {
 
 }
 const stateForm = {
+    path: '/register/stepTwo',
+    isValid: false,
     inputSelect : '',
     select : '',
     inputs : [
@@ -73,7 +75,7 @@ const stateForm = {
             labelText : 'Numero de documento',
             value : '',
             error : {
-                isError : false, 
+                isError : true, 
                 details: ''
             }
         },
@@ -83,7 +85,7 @@ const stateForm = {
             labelText : 'Fecha de Nacimiento',
             value : '',
             error : {
-                isError : false,
+                isError : true,
                 details: '' 
             }
          },
@@ -93,7 +95,7 @@ const stateForm = {
            labelText : 'Nombres',
            value : '',
            error : {
-               isError : false, 
+               isError : true, 
                details: ''
            }
         },
@@ -103,7 +105,7 @@ const stateForm = {
            labelText : 'Apellido Paterno',
            value : '',
            error : {
-               isError : false, 
+               isError : true, 
                details: ''
            }
         },
@@ -134,7 +136,7 @@ const stateForm = {
     ],
     button : {
         type : 'text',
-        text : 'Comencemos'
+        text : 'CONTINUAR'
     }
 } 
 const head = {

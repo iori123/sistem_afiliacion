@@ -32,7 +32,7 @@ export const Input = (props : any ) => {
                 name = { stateInput.name }
                 className = { stateInput.error.isError ? 'elementForm__input elementForm__input--error' :'elementForm__input'}
                 type = { props.type }
-                autoComplete='none'
+                autoComplete='off'
                 value = {stateInput.value}
             />
        </div>
