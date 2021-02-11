@@ -1,68 +1,10 @@
-import {useState} from 'react';
+import { useState, useEffect } from 'react';
 import Head from '../headMessage';
-
 import { Steps } from '../atoms/Steps';
-import payLogo2 from '../../../assets/Illustration.png'
-import payLogo1 from '../../../assets/plan1.png'
 import Form from '../Form';
 import shadowIcon from '../../../assets/sombra.png';
 
-const initialPlanes = {
-    planSelect : 1,
-    planes : [
-        {   
-            id: 1,
-            text: 'BÁSICO',
-            price : 160,
-            range: 'mensual',
-            benefice : {
-                title: 'Primer beneficio',
-                price: 1,
-                plan: 'PLAN BÁSICO',
-                icon: `${payLogo1}`
-            }
-        },
-        {
-            id:2,
-            text: 'AVANZADO',
-            price : 200,
-            range: 'mensual',
-            benefice : {
-                title: 'Cobertura máxima',
-                price: 5,
-                plan: 'PLAN AVANZADO',
-                icon: `${payLogo2}`
-            }
-        },
-       
-        {
-            id: 3,
-            text: 'PRÉMIUN',
-            price : 250,
-            range: 'mensual',
-            benefice : {
-                title: 'Primer beneficio',
-                price: 10,
-                plan: 'PLAN PRÉMIUN',
-                icon: `${payLogo1}`
-            }
-        },
-        {
-            id:4,
-            text: 'FULL',
-            price : 500,
-            range: 'mensual',
-            benefice : {
-                title: 'Primer beneficio',
-                price: 25,
-                plan: 'PLAN FULL',
-                icon: `${payLogo2}`
-            }
-        },
-       
-    ]
 
-}
 const stateForm = {
     path: '/register/stepTwo',
     isValid: false,
@@ -145,14 +87,21 @@ const head = {
     subtitle: 'valida que los datos sean correctos'
 }
 const RegisterTemplate = () =>  {
+    
+   
+    useEffect( () => {
+        const url = encodeURI(`https://randomuser.me/api`);
+        fetch( url )
+            .then( resp => resp.json() )
+            .then( data => {
+                const user = data.results[0];
+                // stateForm.inputs[1].value =  user.dob.date.slice(0,10);
+                // stateForm.inputs[2].value =  user.name.title;
+                // stateForm.inputs[3].value =  user.name.first;
+                // stateForm.inputs[4].value =  user.name.last;
+            });
+    },[])
 
-    const [planes, setPlanes] = useState(initialPlanes)
-    const handlePlan = (id : number ) => {
-        setPlanes(
-           { ...planes ,
-            planSelect : id 
-        })
-    } 
     return (
         
             <main className="template">

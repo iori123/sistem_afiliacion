@@ -12,7 +12,7 @@ export const Input = (props : any ) => {
         }
 
     });
-
+    
     useEffect(() => {
         props.setInputValue( stateInput );
     }, [stateInput])
@@ -35,7 +35,7 @@ export const Input = (props : any ) => {
                 className = { stateInput.error.isError && stateInput.error.isActive ? 'elementForm__input elementForm__input--error' :'elementForm__input'}
                 type = { props.type }
                 autoComplete='off'
-                value = {stateInput.value}
+                value = {props.value}
             />
        </div>
     )

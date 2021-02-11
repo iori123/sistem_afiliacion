@@ -96,6 +96,7 @@ function Form ( props : {initialState : Form}) {
                         
                       /> 
                         <Input
+                            value = {input.value}
                             setInputValue = { setInputValue  } 
                             onFocus={ inputFocus }
                             className = {`elementForm__label ${state.inputSelect === input.name || input.value !=='' ? 'elementForm__label--active' : ''}`}
@@ -109,6 +110,7 @@ function Form ( props : {initialState : Form}) {
                     :
                     <Fragment key = {index}>
                     <Input
+                        value = {input.value}
                         handleType = { handleType }
                         setInputValue = { setInputValue } 
                         onFocus={ inputFocus }
