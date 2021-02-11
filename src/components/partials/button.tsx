@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom';
 
 export const ButtonForm = (props : any) => {
-    
+    console.log(props)
  
     return (
         <Link to={props.isValid == true ? props.path : '/'}>

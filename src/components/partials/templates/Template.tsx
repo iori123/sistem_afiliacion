@@ -113,7 +113,7 @@ const Template = () =>  {
                                 Envíar cotización por correo
                             </div>
                              <ButtonForm
-                                isValid = {true}
+                                isValid={true}
                                 path = '/register/thanks'
                                 type='submit'
                                 text='COMPRAR PLAN'

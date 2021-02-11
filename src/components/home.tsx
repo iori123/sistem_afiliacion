@@ -45,7 +45,7 @@ const stateForm = {
     checks : [
         {
            checked : false ,
-           condition : 'Política de protección de datos personales y Términos y condiciones'
+           condition : 'Política de protección de datos personales.'
         },
         {
            checked : false ,

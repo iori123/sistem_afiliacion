@@ -67,7 +67,8 @@ function Form ( props : {initialState : Form}) {
                 input.value = stateInput.value;
                 input.error = stateInput.error;
             };
-            isValid = !input.error.isError
+
+            isValid = input.error.isError == true ? false : true
             return input 
         });
       

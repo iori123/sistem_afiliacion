@@ -8,8 +8,10 @@ export const useValidateInput = ( initialState : any ) => {
     const handleInputChange = ( event : { target : HTMLInputElement }) => {
         const { value, name } = event.target;
         const error = {
+            isActive : true,
             isError : false ,
             details : ''
+
         } 
         let inputValue : string = '' ;
         if( name === 'phone' && value !== '') {
@@ -23,9 +25,9 @@ export const useValidateInput = ( initialState : any ) => {
         }
         if( name === 'document' && value !== '') {
             if( /^[0-9]/.test(value)) {
-                inputValue = value.length > 5 ? value.slice(0,5) : value;
+                inputValue = value.length > 8 ? value.slice(0,8) : value;
             }
-            if (inputValue.length !== 5 ) {
+            if (inputValue.length !== 8 ) {
                 error.isError = true;
                 error.details = 'Debe proporcionar un N° de documento válido';
             } 

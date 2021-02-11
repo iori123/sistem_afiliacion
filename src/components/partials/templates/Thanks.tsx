@@ -103,7 +103,7 @@ const Thanks = () =>  {
                 <ButtonForm
                     type='text'
                     text = 'IR A SALUD'
-                    path = '/'
+                    path = '/thanks'
                     isValid= {true}
                 />
             </div>
